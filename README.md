@@ -29,10 +29,9 @@ $ python3 -m venv .venv && source .venv/bin/activate
 $ pip install -r requirements.txt  
 ```
 
-### 2. Download & unify raw benchmarks
-Each sub-experiment ships a notebook `1.prepare_datasets.ipynb`, running it results in one file per benchmark containing the parallel versions of the benchmark of in language.
+### 2. Download & unify raw benchmarks and generate code-switched benchmarks
+Each sub-experiment ships a `1.prepare_datasets.py`, running it results in one file per benchmark containing the parallel versions of the benchmark of in language.
 
-### 3. Generate code-switched benchmarks
 Below is an example for English→Arabic noun-token CSW on Belebele passages.
 ```bash
 python scripts/Main\ Experiments/Linguistically\ motivated\ CSW/noun-token/2.code_switching.py \
@@ -50,7 +49,16 @@ For the heuristic **ratio-token** baseline, invoke the analogous script:
 python scripts/Main\ Experiments/Non-linguistically\ motivated\ code-switching/2.code_switching.py ...
 ```
 ---
-<!-- ## Citation
+## Citation
 If you find this repository useful, please cite:
 ```bibtex
+@misc{mohamed2025lostmixevaluatingllm,
+      title={Lost in the Mix: Evaluating LLM Understanding of Code-Switched Text}, 
+      author={Amr Mohamed and Yang Zhang and Michalis Vazirgiannis and Guokan Shang},
+      year={2025},
+      eprint={2506.14012},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2506.14012}, 
+}
 ``` 
